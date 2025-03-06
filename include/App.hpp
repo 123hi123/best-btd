@@ -2,6 +2,8 @@
 #define APP_HPP
 
 #include "pch.hpp" // IWYU pragma: export
+#include "Panel.hpp"
+#include "Util/Renderer.hpp"
 
 class App {
 public:
@@ -24,6 +26,8 @@ private:
 
 private:
     State m_CurrentState = State::START;
+    std::shared_ptr<Panel> m_Panel;
+    Util::Renderer m_Root;
 };
 
 #endif
